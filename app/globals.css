@@ -70,12 +70,12 @@ p { margin: 0 0 16px; line-height: 1.72; color: var(--muted); font-size: 1.05rem
 /* Navigation */
 .topbar { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(14px); background: rgba(248, 246, 241, 0.88); border-bottom: 1px solid rgba(22,33,43,0.07); padding: 8px 0; }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 24px; }
-.brand-logo.desktop { height: 64px; width: auto; }
+.brand-logo.desktop { height: 80px; width: auto; }
 .brand-logo.mobile { height: 40px; display: none; }
 .brand { display: flex; flex-direction: column; gap: 2px; }
 
 /* Footer logo */
-.footer-logo { height: 64px; width: auto; }
+.footer-logo { height: 80px; width: auto; }
 
 
 .brand-mark { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.02em; }
