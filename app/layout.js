@@ -22,7 +22,7 @@ export const metadata = {
     siteName: 'HomeStake Capital',
     type: 'website',
     images: [{
-      url: '/og-image.jpg',
+      url: '/logo-v2.png',
       width: 1200,
       height: 630,
       alt: 'HomeStake Capital - The Public\'s Private Equity for Home Services'
@@ -32,13 +32,13 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'HomeStake Capital',
     description: 'The public\'s private equity for home services.',
-    images: ['/og-image.jpg']
+    images: ['/logo-v2.png']
   },
   alternates: {
     canonical: '/'
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: '/homestake-logo.svg',
     apple: '/apple-icon.png'
   }
 };
