@@ -17,7 +17,7 @@ export function Header() {
         <div className="container nav">
           <Link href="/" className="brand" aria-label="HomeStake Capital home">
             <Image 
-              src="/logo.svg" 
+              src="/homestake-logo.svg" 
               alt="HomeStake Capital" 
               width={280} 
               height={74}
@@ -81,7 +81,7 @@ export function Footer() {
       <div className="container grid-3">
         <div>
           <Image 
-            src="/logo.svg" 
+            src="/homestake-logo.svg" 
             alt="HomeStake Capital" 
             width={220} 
             height={58}
