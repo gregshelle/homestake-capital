@@ -19,8 +19,8 @@ export function Header() {
             <Image 
               src="/homestake-logo-v3.png" 
               alt="HomeStake Capital" 
-              width={180} 
-              height={240}
+              width={220} 
+              height={293}
               className="brand-logo desktop"
               priority
             />
