@@ -18,17 +18,13 @@ export function Header() {
           <Link href="/" className="brand" aria-label="HomeStake Capital home">
             <Image 
               src="/homestake-logo-v3.png" 
-              alt="HomeStake Capital" 
-              width={220} 
-              height={293}
+              alt="HomeStake Capital"
               className="brand-logo desktop"
               priority
             />
             <Image 
               src="/homestake-logo-v3.png" 
-              alt="HomeStake Capital" 
-              width={120} 
-              height={160}
+              alt="HomeStake Capital"
               className="brand-logo mobile"
               priority
             />
