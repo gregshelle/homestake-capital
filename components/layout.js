@@ -21,8 +21,15 @@ export function Header() {
               alt="HomeStake Capital" 
               width={320} 
               height={100}
-              className="brand-logo"
+              className="brand-logo desktop"
               priority
+            />
+            <Image 
+              src="/homestake-logo-mobile.svg" 
+              alt="HomeStake Capital" 
+              width={160} 
+              height={45}
+              className="brand-logo mobile"
             />
           </Link>
 
