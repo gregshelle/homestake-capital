@@ -310,3 +310,18 @@ p { margin: 0 0 16px; line-height: 1.72; color: var(--muted); font-size: 1.05rem
   .auth-panel-right { padding: 40px 28px; }
   .nav-links { display: none; }
 }
+/* Mobile nav: show hamburger, hide nav-links below 768px */
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .hamburger { display: flex !important; }
+  .brand-logo { height: 36px; width: auto; }
+  .brand-logo.desktop { display: none; }
+}
+
+/* Desktop: hide mobile logo */
+@media (min-width: 769px) {
+  .brand-logo.mobile { display: none; }
+}
+
+/* Footer logo */
+.footer-logo { height: 36px; width: auto; }
