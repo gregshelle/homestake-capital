@@ -17,19 +17,20 @@ export function Header() {
         <div className="container nav">
           <Link href="/" className="brand" aria-label="HomeStake Capital home">
             <Image 
-              src="/homestake-logo.svg" 
+              src="/homestake-logo-v3.png" 
               alt="HomeStake Capital" 
-              width={320} 
-              height={100}
+              width={180} 
+              height={240}
               className="brand-logo desktop"
               priority
             />
             <Image 
-              src="/homestake-logo-mobile.svg" 
+              src="/homestake-logo-v3.png" 
               alt="HomeStake Capital" 
-              width={160} 
-              height={45}
+              width={120} 
+              height={160}
               className="brand-logo mobile"
+              priority
             />
           </Link>
 
@@ -88,10 +89,10 @@ export function Footer() {
       <div className="container grid-3">
         <div>
           <Image 
-            src="/homestake-logo.svg" 
+            src="/homestake-logo-v3.png" 
             alt="HomeStake Capital" 
-            width={220} 
-            height={58}
+            width={180} 
+            height={240}
             className="footer-logo"
           />
           <p className="small" style={{ marginTop: 12 }}>
