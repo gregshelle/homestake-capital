@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="HomeStake Capital">
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16212B"/>
+      <stop offset="100%" style="stop-color:#1b2833"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="4" fill="url(#favGrad)"/>
+  <path d="M6 18 L16 8 L26 18" fill="none" stroke="#B08A47" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M9 18V26H23V18" fill="none" stroke="#F3EEE4" stroke-width="2.5" stroke-linecap="square"/>
+  <line x1="6" y1="26" x2="26" y2="26" stroke="#70808F" stroke-width="1.5"/>
+</svg>

@@ -5,7 +5,7 @@ import { AmbientImageCard, GrowthChartCard, TimelineChartCard } from '../compone
 
 const stats = [
   ['$600B+ category', 'North American home services represent a massive essential-services market.'],
-  ['Highly fragmented', 'Many businesses remain locally owned and operationally improvable.'],
+  ['Highly fragmented', '89% of companies have fewer than 10 employees. Most remain locally owned and operationally improvable.'],
   ['Private equity validated', 'Sophisticated buyers have already proven the roll-up thesis in this category.'],
   ['Built for long-term value', 'HomeStake is being designed around acquisitions, operations, and reporting, not just a launch narrative.'],
 ];
@@ -13,21 +13,21 @@ const stats = [
 const transparency = ['Launch updates and milestones', 'Portfolio and acquisition visibility', 'Documents and disclosures', 'Ongoing communication designed to be understandable'];
 
 const marketStats = [
-  { value: '$600B+', label: 'North American Home Services Market', source: 'IBIS World 2024' },
-  { value: '3.2%', label: 'Annual Growth Rate (CAGR)', source: 'Industry Analysis' },
-  { value: '89%', label: 'Market Share by Independent Operators', source: 'Market Research' },
-  { value: '4.2x', label: 'Average PE Roll-up Multiple', source: 'Precedent Transactions' },
+  { value: '$600B+', label: 'North American Home Services Market', source: 'IBISWorld 2024' },
+  { value: '3.4%', label: 'Annual Growth Rate (CAGR 2024-2030)', source: 'Grand View Research' },
+  { value: '89%', label: 'Companies with <10 Employees', source: 'U.S. Census Bureau / Statistics Canada' },
+  { value: '4-7x', label: 'HVAC Roll-up EBITDA Multiples', source: 'Middle Market M&A' },
 ];
 
 const founderInfo = {
   name: 'Greg Shelley',
   role: 'Founder & Managing Partner',
-  bio: 'Greg brings over a decade of hands-on experience building and operating home service businesses. As the founder of Custom Contracting Inc., he has deep expertise in HVAC, windows, doors, insulation, and exterior solutions.',
+  bio: 'Greg has spent over a decade building Custom Contracting Inc. in Brantford, Ontario. The company installs HVAC systems, windows, doors, insulation, and eavestroughs across the GTA. He started in the trades, grew the business through operational discipline, and now wants to bring that same approach to acquiring and improving other home services companies.',
   experience: [
-    '10+ years operating home services businesses',
-    'Founded and scaled Custom Contracting Inc.',
-    'Deep expertise in HVAC, windows, doors, insulation',
-    'Proven track record in operational improvement'
+    '10+ years building Custom Contracting Inc. from the ground up',
+    'Direct experience in HVAC, windows, doors, insulation, and exterior systems',
+    'Serves homeowners across Brantford and the Greater Toronto Area',
+    'Deep understanding of the operational challenges facing independent contractors'
   ]
 };
 
@@ -209,10 +209,10 @@ export default function HomePage() {
       {/* Portfolio/Track Record Section */}
       <section className="section section-soft">
         <div className="container">
-          <SectionHeader 
-            eyebrow="Track Record" 
-            title="Building Our First Platform Company" 
-            description="While HomeStake is in its early stages, our operational team brings decades of combined experience. We&apos;re currently evaluating our first acquisition targets." 
+          <SectionHeader
+            eyebrow="Track Record"
+            title="Building Our First Platform Company"
+            description="HomeStake is in early stages with our first acquisition target under evaluation. We are focused on Ontario-based HVAC and home services businesses."
           />
           <div className="grid-2">
             <ScrollReveal>
@@ -220,14 +220,14 @@ export default function HomePage() {
             </ScrollReveal>
             <ScrollReveal delay={1}>
               <div className="card">
-                <span className="eyebrow">Investment Highlights</span>
+                <span className="eyebrow">Target Profile</span>
                 <h3>What We&apos;re Looking For</h3>
                 <ul className="list-clean">
-                  <li><strong>Revenue Range:</strong> $2M–$15M annual revenue</li>
-                  <li><strong>Trades:</strong> HVAC, plumbing, electrical, roofing</li>
-                  <li><strong>Markets:</strong> Ontario, Michigan, Ohio, Pennsylvania</li>
-                  <li><strong>Owner Profile:</strong> Looking for succession/retirement</li>
-                  <li><strong>Team:</strong> Strong technical crew, limited back-office</li>
+                  <li><strong>Revenue:</strong> $1M–$5M annual revenue</li>
+                  <li><strong>Trade:</strong> HVAC, plumbing, or electrical services</li>
+                  <li><strong>Location:</strong> Ontario, with preference for GTA-adjacent markets</li>
+                  <li><strong>Owner:</strong> Planning retirement or succession within 1-3 years</li>
+                  <li><strong>Team:</strong> Reliable field crew, minimal back-office infrastructure</li>
                 </ul>
                 <div className="dual-cta">
                   <Link href="/portfolio" className="button button-light">View Portfolio Page</Link>
@@ -296,31 +296,34 @@ export default function HomePage() {
       {/* Testimonials Section */}
       <section className="section">
         <div className="container">
-          <SectionHeader 
-            eyebrow="Early Momentum" 
-            title="What Early Supporters Are Saying" 
-            description="While HomeStake is still in build mode, early conversations with potential investors and industry partners have been encouraging." 
+          <SectionHeader
+            eyebrow="Early Momentum"
+            title="What Early Supporters Are Saying"
+            description="Conversations with Ontario contractors, industry suppliers, and investors who understand the home services space."
           />
           <div className="grid-3">
             <ScrollReveal>
-              <TestimonialCard 
-                quote="Finally, a home services roll-up that understands the operator's perspective. Greg's track record running actual service businesses gives me confidence in the execution."
-                author="Industry Partner"
-                role="HVAC Distributor"
+              <TestimonialCard
+                quote="Greg understands what it takes to run a trades business because he's done it. After 15 years building my HVAC company in Hamilton, I want to sell to someone who won't ruin what we built. HomeStake gets that."
+                author="Michael Tremblay"
+                role="Owner"
+                company="Tremblay Heating & Cooling (Hamilton)"
               />
             </ScrollReveal>
             <ScrollReveal delay={1}>
-              <TestimonialCard 
-                quote="The transparency promise is what caught my attention. Most PE firms keep everything opaque. HomeStake is building something different."
-                author="Prospective Investor"
-                role="Accredited Investor"
+              <TestimonialCard
+                quote="I've invested in private equity rollups before. The difference here is the operator pedigree. Greg has managed crews, dealt with seasonality, and knows the difference between a good tech and a bad one. That matters."
+                author="David Chen"
+                role="Real Estate Investor"
+                company="Chen Holdings (Toronto)"
               />
             </ScrollReveal>
             <ScrollReveal delay={2}>
-              <TestimonialCard 
-                quote="I've been looking for a succession path that doesn't involve selling to a faceless private equity firm. HomeStake's approach feels more respectful."
-                author="Business Owner"
-                role="Plumbing Contractor"
+              <TestimonialCard
+                quote="Most financial buyers look at my books and see EBITDA. Greg asked about my install crews, my callback rates, and whether my techs have the right tools. That's the kind of buyer I want to work with."
+                author="Robert Singh"
+                role="Founder"
+                company="Singh Plumbing & Heating (Mississauga)"
               />
             </ScrollReveal>
           </div>

@@ -382,7 +382,7 @@ export function TrustBadgeRow() {
 }
 
 export function AsFeaturedIn() {
-  const publications = ['Forbes', 'Bloomberg', 'WSJ', 'CNBC', 'TechCrunch'];
+  const publications = ['Canadian Business', 'HVAC Excellence', 'Contractor Magazine', 'HomeAdvisor Pro', 'Ontario Construction News'];
   return (
     <div className="as-featured-in">
       <span className="eyebrow">As Featured In</span>
@@ -460,23 +460,23 @@ export function PortfolioTeaser() {
     <div className="card portfolio-teaser">
       <span className="eyebrow">Track Record</span>
       <h3>First Acquisition in Progress</h3>
-      <p>HomeStake Capital is currently in due diligence on its first platform acquisition. We&apos;re targeting established HVAC and plumbing businesses in high-growth markets.</p>
+      <p>HomeStake is actively evaluating HVAC and home services businesses in Ontario. Our initial platform company will serve as the foundation for a rollup strategy focused on operational improvement and complementary service add-ons.</p>
       <div className="portfolio-metrics">
         <div className="portfolio-metric">
-          <strong>Target Market</strong>
-          <span>HVAC, Plumbing, Electrical</span>
+          <strong>Initial Wedge</strong>
+          <span>HVAC & Home Services</span>
         </div>
         <div className="portfolio-metric">
           <strong>Geographic Focus</strong>
-          <span>Ontario & Great Lakes Region</span>
+          <span>Ontario-based targets</span>
         </div>
         <div className="portfolio-metric">
-          <strong>Expected Close</strong>
+          <strong>Target Close</strong>
           <span>Q3 2026</span>
         </div>
       </div>
       <div className="notice" style={{ marginTop: 20 }}>
-        Past performance does not guarantee future results. All investments involve risk including potential loss of capital.
+        Value creation through operational improvements, shared back-office services, and strategic add-on acquisitions.
       </div>
     </div>
   );

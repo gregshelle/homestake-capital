@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Gate Disclaimer - HomeStake Capital Inc.</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #c9a227;
+            --danger: #c53030;
+            --warning: #dd6b20;
+            --bg: #f7fafc;
+            --text: #2d3748;
+            --success: #22543d;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 100%;
+            margin: 0;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        
+        /* The actual component styles */
+        .investor-gate-component {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .gate-banner {
+            background: linear-gradient(135deg, var(--danger) 0%, #9b2c2c 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        
+        .gate-banner h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .gate-banner .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gate-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gate-notice {
+            background: #fff5f5;
+            border-left: 4px solid var(--danger);
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .gate-notice h3 {
+            color: var(--danger);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        
+        .gate-notice p {
+            margin: 0;
+            color: #744210;
+        }
+        
+        .explanation-box {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .explanation-box h4 {
+            margin-top: 0;
+            color: var(--secondary);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .explanation-box p {
+            margin-bottom: 1rem;
+        }
+        
+        .explanation-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        @media (max-width: 600px) {
+            .criteria-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .criterion-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1rem;
+        }
+        
+        .criterion-card h5 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        .criterion-card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #4a5568;
+        }
+        
+        .suitability-section {
+            background: #fffaf0;
+            border: 2px solid var(--warning);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .suitability-section h4 {
+            margin-top: 0;
+            color: var(--warning);
+        }
+        
+        .checkbox-list {
+            margin: 1rem 0;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 0.75rem;
+            margin-top: 0.2rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+        }
+        
+        .checkbox-item label {
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 600px) {
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary);
+        }
+        
+        .btn-secondary {
+            background: #e2e8f0;
+            color: var(--text);
+        }
+        
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .ppm-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .ppm-link a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .ppm-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .draft-marker {
+            background: #fef3c7;
+            border-left: 4px solid var(--accent);
+            padding: 0.75rem 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #92400e;
+            font-size: 0.9rem;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .footer-notice {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--danger);
+            color: var(--danger);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        /* Modal/Overlay variant */
+        .gate-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+        
+        .gate-modal {
+            background: white;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .gate-modal .gate-content {
+            border-radius: 0 0 8px 8px;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 
+    INVESTOR GATE / DISCLAIMER COMPONENT
+    ===================================
+    This HTML component is designed to be embedded on investor-facing pages
+    to ensure compliance with Regulation D, Rule 506(c) requirements.
+    
+    Usage:
+    - Embed this component before granting access to investment materials
+    - Use as a modal overlay or inline page section
+    - Customize colors to match your brand (maintain high contrast for warnings)
+-->
+
+<div class="draft-marker">
+    [DRAFT - ATTORNEY REVIEW REQUIRED: This investor gate component must be reviewed by securities counsel before deployment to ensure compliance with Rule 506(c) verification requirements.]
+</div>
+
+<div class="investor-gate-component">
+    <div class="gate-banner">
+        <div class="icon">⚠️</div>
+        <h2>Accredited Investor Verification Required</h2>
+    </div>
+    
+    <div class="gate-content">
+        <div class="gate-notice">
+            <h3>🔒 Restricted Access</h3>
+            <p>The information on this page is intended exclusively for <strong>accredited investors</strong> and contains confidential offering materials for a private placement exempt from registration under the Securities Act of 1933.</p>
+        </div>
+        
+        <div class="explanation-box">
+            <h4>What is Regulation D, Rule 506(c)?</h4>
+            <p><strong>Regulation D</strong> provides exemptions from the registration requirements of the Securities Act, allowing companies to offer and sell securities without registering with the SEC.</p>
+            
+            <p><strong>Rule 506(c)</strong> permits issuers to broadly solicit and generally advertise an offering, provided that:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li>All purchasers in the offering are <strong>accredited investors</strong></li>
+                <li>The issuer takes <strong>reasonable steps</strong> to verify purchasers' accredited investor status</li>
+                <li>All other terms and conditions of Regulation D are satisfied</li>
+            </ul>
+        </div>
+        
+        <div class="explanation-box">
+            <h4>Accredited Investor Criteria</h4>
+            <p>You qualify as an accredited investor if you meet <strong>at least one</strong> of the following criteria:</p>
+            
+            <div class="criteria-grid">
+                <div class="criterion-card">
+                    <h5>💰 Income Test (Individual)</h5>
+                    <p>Individual income exceeding $200,000 in each of the two most recent years (or $300,000 jointly with spouse) and reasonably expects the same income level in the current year.</p>
+                </div>
+                
+                <div class="criterion-card">
+                    <h5>🏠 Net Worth Test</h5>
+                    <p>Net worth exceeding $1,000,000 (individually or jointly with spouse), excluding the value of your primary residence.</p>
+                </div>
+                
+                <div class="criterion-card">
+                    <h5>🏢 Entity Test (Assets)</h5>
+                    <p>An entity with total assets in excess of $5,000,000 that was not formed for the specific purpose of acquiring the securities offered.</p>
+                </div>
+                
+                <div class="criterion-card">
+                    <h5>👥 Entity Test (Owners)</h5>
+                    <p>An entity in which all of the equity owners are accredited investors.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="suitability-section">
+            <h4>✓ Suitability Acknowledgment</h4>
+            <p>Before proceeding, please confirm the following:</p>
+            
+            <div class="checkbox-list">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ack1">
+                    <label for="ack1">I am an accredited investor as defined in Rule 501 of Regulation D.</label>
+                </div>
+                
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ack2">
+                    <label for="ack2">I understand that this is a private placement of unregistered securities with significant risks, including the potential loss of my entire investment.</label>
+                </div>
+                
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ack3">
+                    <label for="ack3">I understand that these securities are illiquid, there is no public market for them, and I may be unable to sell or transfer them.</label>
+                </div>
+                
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ack4">
+                    <label for="ack4">I have sufficient knowledge and experience in financial and business matters to evaluate the merits and risks of this investment.</label>
+                </div>
+                
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ack5">
+                    <label for="ack5">I understand that the Company will verify my accredited investor status before accepting any investment.</label>
+                </div>
+                
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ack6">
+                    <label for="ack6">I agree to keep all offering materials confidential and not to distribute them to any other person.</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="btn btn-primary" onclick="alert('[DRAFT - ATTORNEY REVIEW REQUIRED: Implement actual verification workflow]')">
+                Proceed to Investment Materials
+            </button>
+            <a href="/" class="btn btn-secondary">
+                I Do Not Qualify - Exit
+            </a>
+        </div>
+        
+        <div class="ppm-link">
+            <p>
+                📄 <a href="./ppm-draft.html">View Private Placement Memorandum</a>
+            </p>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">
+                For complete offering terms, risks, and subscription procedures
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="footer-notice">
+    ⚠️ DRAFT DOCUMENT — DOES NOT CONSTITUTE LEGAL OR INVESTMENT ADVICE — FOR ATTORNEY REVIEW ONLY
+</div>
+
+<!-- 
+    ALTERNATIVE: MODAL/OVERLAY VERSION
+    ==================================
+    Uncomment and use the following code to display the gate as a modal overlay
+    that blocks access to content until acknowledged.
+
+<div class="gate-modal-overlay">
+    <div class="gate-modal">
+        <div class="gate-banner">
+            <div class="icon">⚠️</div>
+            <h2>Accredited Investor Verification Required</h2>
+        </div>
+        <div class="gate-content">
+            [Content same as above]
+        </div>
+    </div>
+</div>
+-->
+
+<!-- 
+    INTEGRATION NOTES FOR DEVELOPERS
+    ================================
+    
+    1. VERIFICATION WORKFLOW:
+       - Implement backend verification of accredited investor status
+       - Accept documentation: tax returns, bank statements, or third-party verification
+       - Store verification records for SEC compliance
+    
+    2. SESSION MANAGEMENT:
+       - Set a session cookie after successful verification
+       - Re-verify periodically (e.g., annually or for each new offering)
+    
+    3. ACCESS CONTROL:
+       - Protect all investor-only routes/pages with this gate
+       - Return 403 or redirect to gate if not verified
+    
+    4. AUDIT LOGGING:
+       - Log all access attempts to investor materials
+       - Record verification confirmations and timestamps
+    
+    5. LEGAL COMPLIANCE:
+       - Have securities counsel review the gate language
+       - Ensure checkbox acknowledgments create binding records
+       - Maintain records per SEC requirements
+-->
+
+</body>
+</html>

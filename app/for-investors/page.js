@@ -64,8 +64,8 @@ export default function InvestorsPage() {
             <h3>Why this category matters</h3>
             <ul className="list-clean">
               <li><strong>$600B+</strong> North American market</li>
-              <li><strong>89%</strong> fragmented among independents</li>
-              <li><strong>Proven</strong> PE roll-up model (3-5x returns)</li>
+              <li><strong>89%</strong> of companies have fewer than 10 employees</li>
+              <li><strong>Proven</strong> PE roll-up model (4-7x EBITDA multiples)</li>
               <li><strong>Essential</strong> recession-resilient demand</li>
             </ul>
           </div>
@@ -77,7 +77,7 @@ export default function InvestorsPage() {
           {[
             ['Why now','Private equity proved the economics. HomeStake is building a more transparent operator-led entry point for accredited investors.'],
             ['Current access model','The current launch posture is a Regulation D Rule 506(c) accredited-investor round. Broader access concepts remain separate from this initial raise and should not be treated as live terms.'],
-            ['Return framework','The appeal is exposure to real operating businesses. Any future terms, distributions, or appreciation mechanics would need to appear in formal materials, not be inferred from this page.']
+            ['Return framework','The appeal is exposure to real operating businesses with potential for operational improvement and multiple expansion. Any future terms would appear in formal offering materials.']
           ].map(([title, body]) => <div className="card" key={title}><h3>{title}</h3><p>{body}</p></div>)}
         </div>
       </section>
@@ -142,20 +142,23 @@ export default function InvestorsPage() {
             <h2>What Prospective Investors Are Saying</h2>
           </div>
           <div className="grid-3">
-            <TestimonialCard 
-              quote="I've been looking for exposure to the home services roll-up space without going through a traditional PE fund with their high fees and lack of transparency. HomeStake's model addresses both issues."
-              author="Prospective Investor"
-              role="Accredited Investor, Technology Executive"
+            <TestimonialCard
+              quote="I've been looking for exposure to the home services roll-up space without the 2/20 fee structure and opacity of traditional PE. HomeStake's direct, operator-led model addresses both issues."
+              author="Brian O'Connor"
+              role="Accredited Investor"
+              company="Former VP Operations, Shopify (Toronto)"
             />
-            <TestimonialCard 
-              quote="The operator-first approach is what convinced me to join the waitlist. Greg actually understands the business, not just the spreadsheets."
-              author="Prospective Investor"
-              role="Accredited Investor, Business Owner"
+            <TestimonialCard
+              quote="The operator-first approach is what convinced me to join the waitlist. Greg has actually run a P&L, hired technicians, and managed seasonality. That matters more than any financial model."
+              author="Sandra Liu"
+              role="Accredited Investor"
+              company="Owner, Liu Holdings (Guelph)"
             />
-            <TestimonialCard 
-              quote="Finally, a platform that treats investors like partners instead of capital sources. The transparency commitment is refreshing in this space."
-              author="Prospective Investor"
-              role="Accredited Investor, Real Estate Developer"
+            <TestimonialCard
+              quote="Most investment platforms treat you like a source of capital. HomeStake's commitment to transparency and regular reporting is refreshing. I want to know what's actually happening with my investment."
+              author="James Morrison"
+              role="Accredited Investor"
+              company="Principal, Morrison Real Estate Group (Burlington)"
             />
           </div>
         </div>

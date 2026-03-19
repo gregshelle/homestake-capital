@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { site, organizationSchema } from '../lib/site';
 
@@ -15,8 +16,14 @@ export function Header() {
       <header className="topbar">
         <div className="container nav">
           <Link href="/" className="brand" aria-label="HomeStake Capital home">
-            <span className="brand-mark">HomeStake Capital</span>
-            <span className="brand-sub">The public&apos;s private equity for home services</span>
+            <Image 
+              src="/logo.svg" 
+              alt="HomeStake Capital" 
+              width={280} 
+              height={74}
+              className="brand-logo"
+              priority
+            />
           </Link>
 
           <nav className="nav-links" aria-label="Primary navigation">
@@ -73,7 +80,13 @@ export function Footer() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <div className="container grid-3">
         <div>
-          <div className="brand-mark">HomeStake Capital</div>
+          <Image 
+            src="/logo.svg" 
+            alt="HomeStake Capital" 
+            width={220} 
+            height={58}
+            className="footer-logo"
+          />
           <p className="small" style={{ marginTop: 12 }}>
             HomeStake Capital is building a community-first holding company focused on acquiring and growing home service businesses across North America, while offering a more open and transparent ownership model than traditional private equity.
           </p>

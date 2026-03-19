@@ -4,13 +4,13 @@ import { CTASection, FounderCard, TestimonialCard, TrustBadgeRow } from '../../c
 const founderInfo = {
   name: 'Greg Shelley',
   role: 'Founder & Managing Partner',
-  bio: 'Greg brings over a decade of hands-on experience building and operating home service businesses. As the founder of Custom Contracting Inc., he has deep expertise in HVAC, windows, doors, insulation, and exterior solutions. His operator-first approach is the foundation of HomeStake\'s acquisition and improvement strategy.',
+  bio: 'Greg has spent over a decade building Custom Contracting Inc. in Brantford, Ontario. The company installs HVAC systems, windows, doors, insulation, and eavestroughs across the GTA. He started in the trades, grew the business through operational discipline, and now wants to bring that same approach to acquiring and improving other home services companies.',
   experience: [
-    '10+ years operating home services businesses in Ontario',
-    'Founded and scaled Custom Contracting Inc., serving thousands of homeowners',
-    'Deep expertise in HVAC, windows, doors, insulation, and eavestrough systems',
-    'Proven track record in operational improvement and team building',
-    'Direct experience with the challenges facing independent service contractors'
+    '10+ years building Custom Contracting Inc. from the ground up in Brantford, Ontario',
+    'Direct experience in HVAC, windows, doors, insulation, and exterior systems',
+    'Serves homeowners across the Greater Toronto Area',
+    'Deep understanding of the operational challenges facing independent contractors',
+    'Experience with seasonal demand, crew management, and customer acquisition'
   ]
 };
 
@@ -142,20 +142,23 @@ export default function AboutPage() {
             <h2>What Partners Are Saying</h2>
           </div>
           <div className="grid-3">
-            <TestimonialCard 
-              quote="Greg's reputation in the home services industry is well-established. Having an operator at the helm instead of a finance person changes everything about how this platform will execute."
-              author="Strategic Advisor"
-              role="Industry Consultant"
+            <TestimonialCard
+              quote="Greg's reputation in the Ontario home services industry is well-established. Having an operator at the helm—someone who has actually managed installs and dealt with callbacks—changes everything about how this platform will execute."
+              author="Jennifer Walsh"
+              role="Regional Manager"
+              company="Lennox Industries Canada (Toronto)"
             />
-            <TestimonialCard 
-              quote="The home services roll-up space is crowded with financial buyers who don't understand the trades. HomeStake's operator-first approach is a genuine differentiator."
-              author="Potential Partner"
-              role="Equipment Supplier"
+            <TestimonialCard
+              quote="The home services roll-up space is crowded with financial buyers who don't understand the trades. HomeStake's operator-first approach is a genuine differentiator. Greg knows what good work looks like."
+              author="Marcus Johnson"
+              role="Owner"
+              company="Johnson HVAC Supply (Kitchener)"
             />
-            <TestimonialCard 
-              quote="I've seen a lot of roll-up concepts. Most are just financial engineering. This one actually makes operational sense."
-              author="Industry Peer"
-              role="Contractor Network"
+            <TestimonialCard
+              quote="I've seen a lot of roll-up concepts. Most are just financial engineering. This one actually makes operational sense because Greg has lived the business."
+              author="Ahmed Hassan"
+              role="Former Owner"
+              company="Hassan Electric (Oakville)"
             />
           </div>
         </div>

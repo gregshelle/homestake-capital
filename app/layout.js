@@ -38,7 +38,7 @@ export const metadata = {
     canonical: '/'
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.svg',
     apple: '/apple-icon.png'
   }
 };
