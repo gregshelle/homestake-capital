@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" role="img" aria-label="HomeStake Capital">
+  <!-- House icon -->
+  <g transform="translate(0,8)">
+    <path d="M20 0 L0 18 L14 18 L14 56 H46 V18 L60 18 Z" fill="#16212B"/>
+    <path d="M20 8 L30 18 L10 18 Z" fill="#B08A47"/>
+    <path d="M20 28 L26 22 L32 28 V36 H26 V28 Z" fill="#B08A47"/>
+    <rect x="0" y="56" width="60" height="3" fill="#B08A47"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="72" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#16212B" letter-spacing="-0.5">HomeStake</text>
+  <text x="73" y="48" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="500" fill="#B08A47" letter-spacing="4">CAPITAL</text>
+</svg>
