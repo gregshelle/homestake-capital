@@ -1,6 +1,6 @@
 export default function robots() {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://example.com/sitemap.xml',
+    sitemap: 'https://website-build-ivory.vercel.app/sitemap.xml',
   };
 }

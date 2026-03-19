@@ -1,17 +1,45 @@
 'use client';
 
 import Image from 'next/image';
-import {
-  Area,
-  AreaChart,
-  CartesianGrid,
-  Line,
-  LineChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
+import dynamic from 'next/dynamic';
+
+// Dynamic import recharts components to reduce initial bundle size
+const ResponsiveContainer = dynamic(
+  () => import('recharts').then(mod => mod.ResponsiveContainer),
+  { ssr: false }
+);
+const AreaChart = dynamic(
+  () => import('recharts').then(mod => mod.AreaChart),
+  { ssr: false }
+);
+const LineChart = dynamic(
+  () => import('recharts').then(mod => mod.LineChart),
+  { ssr: false }
+);
+const Area = dynamic(
+  () => import('recharts').then(mod => mod.Area),
+  { ssr: false }
+);
+const Line = dynamic(
+  () => import('recharts').then(mod => mod.Line),
+  { ssr: false }
+);
+const CartesianGrid = dynamic(
+  () => import('recharts').then(mod => mod.CartesianGrid),
+  { ssr: false }
+);
+const XAxis = dynamic(
+  () => import('recharts').then(mod => mod.XAxis),
+  { ssr: false }
+);
+const YAxis = dynamic(
+  () => import('recharts').then(mod => mod.YAxis),
+  { ssr: false }
+);
+const Tooltip = dynamic(
+  () => import('recharts').then(mod => mod.Tooltip),
+  { ssr: false }
+);
 
 const growthData = [
   { year: 'Y1', portfolio: 12, revenue: 8 },
@@ -29,16 +57,24 @@ const timelineData = [
   { phase: 'Scale', value: 92 },
 ];
 
-export function AmbientImageCard({ src, alt, eyebrow, title, body, tall = false }) {
+export function AmbientImageCard({ src, alt, eyebrow, title, body, tall = false, headingLevel = 'h2' }) {
+  const HeadingTag = headingLevel;
   return (
     <div className={`image-card${tall ? ' image-card-tall' : ''}`}>
       <div className="image-card-media">
-        <Image src={src} alt={alt} fill sizes="(max-width: 960px) 100vw, 40vw" />
+        <Image 
+          src={src} 
+          alt={alt} 
+          fill 
+          sizes="(max-width: 960px) 100vw, 40vw"
+          priority={false}
+          loading="lazy"
+        />
       </div>
       <div className="image-card-overlay" />
       <div className="image-card-copy">
         {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
-        <h3>{title}</h3>
+        <HeadingTag>{title}</HeadingTag>
         <p>{body}</p>
       </div>
     </div>

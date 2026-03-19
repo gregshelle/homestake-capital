@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const base = 'https://example.com';
+  const base = 'https://website-build-ivory.vercel.app';
   const pages = [
     '',
     '/about',
