@@ -15,23 +15,15 @@ export function Header() {
 
       <header className="topbar">
         <div className="container nav">
-          <Link href="/" className="brand" aria-label="HomeStake Capital home">
-            <Image 
-              src="/homestake-logo-v3.png" 
-              alt="HomeStake Capital" 
-              width={180} 
-              height={240}
+          <Link href="/"
+              className="brand" aria-label="HomeStake Capital home">
+            <img
+              src="/homestake-logo.png"
+              alt="HomeStake Capital"
               className="brand-logo desktop"
-              priority
+              style={{ height: "64px", width: "auto", color: "inherit" }}
             />
-            <Image 
-              src="/homestake-logo-v3.png" 
-              alt="HomeStake Capital" 
-              width={120} 
-              height={160}
-              className="brand-logo mobile"
-              priority
-            />
+          </Link>
           </Link>
 
           <nav className="nav-links" aria-label="Primary navigation">
@@ -89,7 +81,7 @@ export function Footer() {
       <div className="container grid-3">
         <div>
           <Image 
-            src="/homestake-logo-v3.png" 
+            src="/homestake-logo.png" 
             alt="HomeStake Capital" 
             width={180} 
             height={240}
