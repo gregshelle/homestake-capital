@@ -17,10 +17,10 @@ export function Header() {
         <div className="container nav">
           <Link href="/" className="brand" aria-label="HomeStake Capital home">
             <Image 
-              src="/homestake-logo-v3.png" 
+              src="/homestake-header-logo.png" 
               alt="HomeStake Capital" 
               width={280} 
-              height={373}
+              height={158}
               className="brand-logo desktop"
               priority
             />
