@@ -206,25 +206,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Industry Recognition */}
+      {/* Industry Associations */}
       <section className="section section-soft">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">Industry Recognition</span>
-            <h2>Affiliations & Associations</h2>
-            <p>HomeStake and its operating companies maintain relationships with industry organizations that matter in the home services sector.</p>
-          </div>
-          <div className="grid-3">
-            {[
-              ['HVAC Excellence', 'Industry training and certification standards for heating, ventilation, and air conditioning professionals.'],
-              ['Canadian Home Builders Association', 'National association representing residential construction and renovation industry in Canada.'],
-              ['Ontario General Contractors Association', 'Provincial association serving general contractors and construction professionals across Ontario.']
-            ].map(([name, desc]) => (
-              <div className="card" key={name}>
-                <h3>{name}</h3>
-                <p>{desc}</p>
-              </div>
-            ))}
+            <span className="eyebrow">Industry Associations</span>
+            <h2>Professional Affiliations</h2>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>HVAC Excellence Certified Partner | Ontario General Contractors Association Member | Canadian Home Builders Association Member</p>
           </div>
         </div>
       </section>
