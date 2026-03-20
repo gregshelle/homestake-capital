@@ -21,7 +21,7 @@ export function Header() {
               src="/homestake-logo.png"
               alt="HomeStake Capital"
               className="brand-logo desktop"
-              style={{ height: "64px", width: "auto" }}
+              style={{ height: "64px", width: "auto", color: "inherit" }}
             />
           </Link>
           </Link>
