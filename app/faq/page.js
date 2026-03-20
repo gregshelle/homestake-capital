@@ -42,6 +42,9 @@ const allItems = faqCategories.flatMap(cat => cat.items);
 
 export const metadata = {
   title: 'HomeStake Capital FAQ',
+  alternates: {
+    canonical: 'https://website-build-ivory.vercel.app/faq'
+  },
   description: 'Answers to investor, seller, and category questions about HomeStake Capital.',
 };
 
