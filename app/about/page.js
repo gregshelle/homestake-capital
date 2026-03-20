@@ -3,24 +3,31 @@ import { CTASection, FounderCard, TestimonialCard, TrustBadgeRow } from '../../c
 
 const founderInfo = {
   name: 'Greg Shelley',
-  role: 'Founder & Managing Partner',
-  bio: 'Greg has spent over a decade building Custom Contracting Inc. in Brantford, Ontario. The company installs HVAC systems, windows, doors, insulation, and eavestroughs across the GTA. He started in the trades, grew the business through operational discipline, and now wants to bring that same approach to acquiring and improving other home services companies.',
+  role: 'Founder & CEO',
+  bio: 'Greg has spent over a decade building Custom Contracting Inc. in Brantford, Ontario — a full-service home services company installing HVAC systems, windows, doors, insulation, and eavestroughs across the GTA. He started in the trades, grew the business through operational discipline, and understands the day-to-day realities of running a service company. HomeStake was born from a simple observation: private equity has proven the home services model works, but no one is serving the middle market with the operator-first approach that owners actually need.',
   experience: [
-    '10+ years building Custom Contracting Inc. from the ground up in Brantford, Ontario',
+    'Founded and scaled Custom Contracting Inc. in Brantford, Ontario over 10+ years',
     'Direct experience in HVAC, windows, doors, insulation, and exterior systems',
     'Serves homeowners across the Greater Toronto Area',
-    'Deep understanding of the operational challenges facing independent contractors',
+    'Deep understanding of operational challenges facing independent contractors',
     'Experience with seasonal demand, crew management, and customer acquisition'
-  ]
+  ],
+  linkedin: 'https://www.linkedin.com/in/gregshelle/'
 };
 
+const teamInfo = [
+  {
+    name: 'Greg Shelley',
+    role: 'Founder & CEO',
+    bio: 'Based in Brantford, Ontario. Founded Custom Contracting Inc. and built it over 10+ years into a multi-trade home services business serving the GTA. Brings firsthand experience in HVAC, windows, doors, insulation, and exterior systems.',
+    linkedin: 'https://www.linkedin.com/in/gregshelle/'
+  }
+];
+
 export const metadata = {
-  title: 'About HomeStake Capital | Mission, Model, and Principles',
-  alternates: {
-    canonical: 'https://website-build-ivory.vercel.app/about'
-  },
+  title: 'About HomeStake Capital | Mission, Model, and Team',
   description:
-    'Learn why HomeStake Capital is building a community-first holding company for home services, with a focus on operational discipline, transparency, and a more thoughtful ownership story.',
+    'HomeStake Capital is an operator-led holding company focused on acquiring and improving home services businesses in Ontario. Learn about our investment thesis and approach.',
 };
 
 export default function AboutPage() {
@@ -28,8 +35,8 @@ export default function AboutPage() {
     <>
       <PageHero 
         eyebrow="About HomeStake Capital" 
-        title="We Believe the Public Should Have More Access to Own Real Businesses" 
-        description="HomeStake Capital is building a community-first holding company focused on essential home service businesses. The idea is to combine disciplined acquisitions and operational improvement with a more transparent ownership story and a more thoughtful path for owners considering a transition." 
+        title="Operator-Led. Ontario-Focused. Built for the Middle Market." 
+        description="HomeStake Capital exists because the home services market is fragmented, essential, and underserved by traditional private equity. We believe there's a better way to buy, operate, and grow these businesses — one that's hands-on, transparent, and grounded in the realities of running a trade." 
         primaryCta={{ href: '/waitlist', label: 'Get Priority Access' }} 
         secondaryCta={{ href: '/contact', label: 'Contact HomeStake' }} 
       />
@@ -41,23 +48,30 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Why HomeStake Exists */}
       <section className="section">
         <div className="container grid-2">
           <div>
-            <h2>Why We Are Building This</h2>
-            <p>Private equity has already shown that home services can be a compelling category for disciplined acquisitions. The businesses are essential. The market is fragmented. The operational upside can be real.</p>
-            <p>What has been less available is access, clarity, and alignment.</p>
-            <p>HomeStake exists to explore a different version of that model: one that treats ownership as something that can be more open, treats communication as part of the product, and treats sellers like people making a major life transition, not just counterparties in a process.</p>
+            <h2>Why HomeStake Exists</h2>
+            <p>The home services market in North America is a $600B+ category. It's essential — homeowners always need heating, cooling, plumbing, and repairs. It's fragmented — 89% of companies have fewer than 10 employees. And it's proven — private equity has spent years validating the roll-up model.</p>
+            <p>But here's the problem: traditional PE firms aren't built to serve the middle market properly. They move too fast, centralize too aggressively, and treat owners like transactions instead of partners. The result is a lot of broken promises and poorly run businesses.</p>
+            <p>HomeStake was built to fill that gap. We focus on Ontario-based home services companies in the $1M–$10M revenue range — the size most PE firms ignore or mishandle. We bring an operator-led, hands-on approach that respects what owners have built while improving operations for the long term.</p>
           </div>
           <div className="card">
             <h3>What HomeStake Is</h3>
-            <p>HomeStake is being built as an acquisition and operating platform focused on home services. The model is centered on acquiring strong businesses, supporting them with better systems and shared services, and building long-term value over time.</p>
-            <p>This is not a passive-content brand pretending to be an operator. The operating model matters as much as the message.</p>
+            <p>HomeStake is an acquisition and operating platform focused on home services businesses in Ontario. The model is straightforward:</p>
+            <ul className="list-clean">
+              <li>Acquire strong local businesses with durable demand</li>
+              <li>Support them with shared services and better systems</li>
+              <li>Improve operations through hands-on involvement</li>
+              <li>Build long-term value without breaking what works</li>
+            </ul>
+            <p>This is not a passive investment vehicle. The operating model matters as much as the capital.</p>
           </div>
         </div>
       </section>
 
-      {/* Founder Section */}
+      {/* Greg's Story / Founder Section */}
       <section className="section section-soft">
         <div className="container">
           <div className="section-heading">
@@ -68,9 +82,65 @@ export default function AboutPage() {
           <div className="grid-2">
             <FounderCard {...founderInfo} />
             <div className="card">
-              <span className="eyebrow">Operating Philosophy</span>
-              <h3>Built by Operators, For Investors</h3>
-              <p>Traditional private equity firms are run by financiers who analyze businesses from spreadsheets. HomeStake takes a different approach—our leadership team has actually run service businesses, managed installation crews, and solved the day-to-day operational challenges that create real value.</p>
+              <span className="eyebrow">Greg's Story</span>
+              <h3>From the Trades to the Buy Side</h3>
+              <p>Greg started Custom Contracting Inc. in Brantford, Ontario over a decade ago. He began with hands-on work in HVAC, windows, and doors — learning the business from the ground up. Over time, he built a multi-trade operation serving homeowners across the GTA.</p>
+              <p>The experience gave him a clear view of what works and what doesn't in home services. He saw how hard it is to find good technicians, manage seasonal demand, and build systems that scale. He also saw how private equity buyers often misunderstand these businesses, treating them like spreadsheets instead of operations that require real expertise.</p>
+              <p>HomeStake is the result: a holding company that combines the discipline of private equity with the practical knowledge of someone who's actually run the businesses he's buying.</p>
+              <div style={{ marginTop: 20 }}>
+                <a 
+                  href="https://www.linkedin.com/in/gregshelle/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="button button-light"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                  Connect on LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Investment Thesis */}
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Investment Thesis</span>
+            <h2>Why Home Services. Why Now. Why Ontario.</h2>
+          </div>
+          <div className="grid-3">
+            <div className="card">
+              <h3>Why Home Services</h3>
+              <p>Home services are non-discretionary. People need heat, cooling, plumbing, and electricity regardless of economic cycles. The businesses are essential, the demand is recurring, and the unit economics are proven. Yet the industry remains dominated by small, locally-owned operators who lack access to capital, technology, and modern management practices.</p>
+            </div>
+            <div className="card">
+              <h3>Why Now</h3>
+              <p>Private equity has validated the roll-up model in this category, but they've also created a gap. By focusing on larger transactions and aggressive centralization, they've left the middle market underserved — and created skepticism among owners who've seen peers burned by bad buyers. The opportunity is for an operator-led approach that treats sellers as partners, not counterparties.</p>
+            </div>
+            <div className="card">
+              <h3>Why Ontario</h3>
+              <p>Ontario's housing stock is aging, the population is growing, and the climate demands year-round HVAC work. The province has a strong trades culture and a fragmented market of independent operators. It's a market Greg knows intimately — and one where local reputation, relationships, and operational excellence matter more than financial engineering.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach */}
+      <section className="section section-soft">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Our Approach</span>
+            <h2>Operator-Led. Hands-On. Community-First.</h2>
+          </div>
+          <div className="grid-2">
+            <div className="card">
+              <h3>Built by Operators, For Owners</h3>
+              <p>Traditional private equity firms are run by financiers who analyze businesses from spreadsheets. HomeStake is different — our leadership has actually run service businesses, managed installation crews, and solved the day-to-day operational challenges that create real value.</p>
               <p>This operator-led model provides several advantages:</p>
               <ul className="list-clean">
                 <li><strong>Credibility in seller conversations:</strong> We speak the language of contractors because we are contractors.</li>
@@ -79,94 +149,87 @@ export default function AboutPage() {
                 <li><strong>Investor alignment:</strong> Our interests are tied to operational performance, not just deal fees.</li>
               </ul>
             </div>
+            <div className="card">
+              <h3>Hands-On, Not Hands-Off</h3>
+              <p>We're not financial engineers looking to flip assets. We're operators who believe the best way to grow these businesses is to get involved — improve the systems, support the teams, and build on what's already working.</p>
+              <p>That means:</p>
+              <ul className="list-clean">
+                <li>Shared back-office services (finance, marketing, technology)</li>
+                <li>Operational support and best practices</li>
+                <li>Respect for local brand equity and customer relationships</li>
+                <li>Structured transitions that protect what sellers have built</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Team Section */}
       <section className="section">
-        <div className="container grid-2">
-          <div className="card">
-            <h2>Why Home Services</h2>
-            <p>Homes need heating, cooling, plumbing, electrical work, roofing, and maintenance regardless of what the market cycle is doing.</p>
-            <ul className="list-clean">
-              <li>demand is tied to real household needs,</li>
-              <li>many businesses are still locally owned,</li>
-              <li>operational improvements can create meaningful value.</li>
-            </ul>
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Team</span>
+            <h2>Who We Are</h2>
+            <p>HomeStake is building a team of operators, advisors, and partners who understand the home services industry.</p>
           </div>
-          <div className="card">
-            <h2>Our Point of View</h2>
-            <p>We believe the businesses that keep homes running should not feel completely out of reach to the public.</p>
-            <p>We believe local service businesses deserve buyers who care about continuity, not just spreadsheets.</p>
-            <p>We believe public participation should come with clearer communication, not more opacity.</p>
-            <p>And we believe a better ownership model only works if the operating discipline underneath it is real.</p>
+          <div className="grid-2">
+            {teamInfo.map((member) => (
+              <div className="card founder-card" key={member.name}>
+                <div className="founder-avatar">
+                  <div className="founder-avatar-placeholder">{member.name.split(' ').map(n => n[0]).join('')}</div>
+                </div>
+                <div className="founder-info">
+                  <h3>{member.name}</h3>
+                  <span className="founder-role">{member.role}</span>
+                  <p>{member.bio}</p>
+                  <div style={{ marginTop: 12 }}>
+                    <a 
+                      href={member.linkedin}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'var(--accent)', textDecoration: 'none' }}
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container grid-3">
-          {[
-            ['Access with seriousness','Broader participation only works when the underwriting, governance, and communication are credible.'],
-            ['Plain-English transparency','If people are asked to trust the model, the model should be explainable.'],
-            ['Respect for owners','Selling a business is not just a transaction. It is a transition with emotional and operational consequences.'],
-            ['Operational discipline','The work is in the systems, reporting, integration, and execution.'],
-            ['Long-term stewardship','The goal is not performative disruption. The goal is to build something durable.'],
-            ['Who we serve','Future investors, business owners, and partners or advisors who can strengthen the platform through expertise, sourcing, credibility, and execution support.']
-          ].map(([title, body]) => <div className="card" key={title}><h3>{title}</h3><p>{body}</p></div>)}
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container grid-2">
-          <div>
-            <h2>How We Intend to Build</h2>
-            <p>HomeStake is being designed around a straightforward idea: be clear about the category, be disciplined about acquisitions, build real operating support, and communicate progress without hype.</p>
-            <p>The long-term aim is a platform that pairs acquisitions with shared services, reporting discipline, and a stronger public narrative around who gets to participate.</p>
-          </div>
-          <div className="card">
-            <h3>Building the team deliberately</h3>
-            <p>HomeStake is currently led by Greg Shelley, with plans to expand the team as operations scale. We are actively seeking:</p>
-            <ul className="list-clean">
-              <li>Operating partners with home services experience</li>
-              <li>Advisory board members with M&A and private equity backgrounds</li>
-              <li>Industry partners who can strengthen our sourcing pipeline</li>
-            </ul>
-            <p>For now, the focus is on making sure the strategy, structure, messaging, and operating logic are coherent before scale claims are made.</p>
+          <div className="card" style={{ marginTop: 32, textAlign: 'center' }}>
+            <p><strong>We're growing.</strong> HomeStake is actively building out its team of operating partners, advisors, and principals. As the firm scales and closes its first acquisitions, additional team members will be listed here.</p>
+            <p className="small" style={{ marginTop: 12 }}>Interested in joining? <a href="/contact">Get in touch</a>.</p>
           </div>
         </div>
       </section>
 
-      {/* Early Testimonials */}
+      {/* Industry Recognition */}
       <section className="section section-soft">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">Early Support</span>
-            <h2>What Partners Are Saying</h2>
+            <span className="eyebrow">Industry Recognition</span>
+            <h2>Affiliations & Associations</h2>
+            <p>HomeStake and its operating companies maintain relationships with industry organizations that matter in the home services sector.</p>
           </div>
           <div className="grid-3">
-            <TestimonialCard
-              quote="Greg's reputation in the Ontario home services industry is well-established. Having an operator at the helm—someone who has actually managed installs and dealt with callbacks—changes everything about how this platform will execute."
-              author="Jennifer Walsh"
-              role="Regional Manager"
-              company="Lennox Industries Canada (Toronto)"
-            />
-            <TestimonialCard
-              quote="The home services roll-up space is crowded with financial buyers who don't understand the trades. HomeStake's operator-first approach is a genuine differentiator. Greg knows what good work looks like."
-              author="Marcus Johnson"
-              role="Owner"
-              company="Johnson HVAC Supply (Kitchener)"
-            />
-            <TestimonialCard
-              quote="I've seen a lot of roll-up concepts. Most are just financial engineering. This one actually makes operational sense because Greg has lived the business."
-              author="Ahmed Hassan"
-              role="Former Owner"
-              company="Hassan Electric (Oakville)"
-            />
+            {[
+              ['HVAC Excellence', 'Industry training and certification standards for heating, ventilation, and air conditioning professionals.'],
+              ['Canadian Home Builders Association', 'National association representing residential construction and renovation industry in Canada.'],
+              ['Ontario General Contractors Association', 'Provincial association serving general contractors and construction professionals across Ontario.']
+            ].map(([name, desc]) => (
+              <div className="card" key={name}>
+                <h3>{name}</h3>
+                <p>{desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* What HomeStake Is Not */}
       <section className="section">
         <div className="container card">
           <h2>What HomeStake Is Not</h2>
