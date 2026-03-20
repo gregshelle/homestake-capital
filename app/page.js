@@ -3,6 +3,25 @@ import { ScrollReveal } from '../components/scroll-reveal';
 import { CTASection, SectionHeader, WaitlistForm, TestimonialCard, TrustBadgeRow, MarketStatCard, PortfolioTeaser, FounderCard } from '../components/sections';
 import { AmbientImageCard, GrowthChartCard, TimelineChartCard } from '../components/visuals';
 
+// LocalBusiness Schema
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "HomeStake Capital",
+  "description": "Business acquisition private equity for home service companies",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Brantford",
+    "addressRegion": "Ontario",
+    "addressCountry": "CA"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Ontario/GTA"
+  },
+  "serviceType": "Business acquisition private equity"
+};
+
 const stats = [
   ['$600B+ category', 'North American home services represent a massive essential-services market.'],
   ['Highly fragmented', '89% of companies have fewer than 10 employees. Most remain locally owned and operationally improvable.'],
@@ -33,7 +52,11 @@ const founderInfo = {
 
 export default function HomePage() {
   return (
-    <>
+    <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <>
       {/* Trust Banner - Urgency/Scarcity */}
       <div style={{ background: 'linear-gradient(135deg, #1b2833, #16212b)', padding: '12px 0' }}>
         <div className="container">
