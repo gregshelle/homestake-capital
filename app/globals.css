@@ -369,3 +369,5 @@ p { margin: 0 0 16px; line-height: 1.72; color: var(--muted); font-size: 1.05rem
 
 /* Footer logo */
 .footer-logo { height: 36px; width: auto; }
+/* Logo image should always be visible */
+img.brand-logo { color: inherit !important; background: transparent !important; fill: none !important; }
