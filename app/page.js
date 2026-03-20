@@ -55,7 +55,7 @@ export default function HomePage() {
     <> 
       <script 
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       {/* Trust Banner - Urgency/Scarcity */}
       <div style={{ background: 'linear-gradient(135deg, #1b2833, #16212b)', padding: '12px 0' }}>
