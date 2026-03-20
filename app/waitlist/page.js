@@ -1,5 +1,5 @@
 import { PageHero } from '../../components/layout';
-import { CTASection, WaitlistForm, TestimonialCard, TrustBadgeRow, UrgencyBanner, MarketStatCard, AsFeaturedIn } from '../../components/sections';
+import { CTASection, WaitlistForm, TestimonialCard, TrustBadgeRow, UrgencyBanner, MarketStatCard } from '../../components/sections';
 
 const marketStats = [
   { value: '$600B+', label: 'Market Opportunity', source: '' },
@@ -130,9 +130,6 @@ export default function WaitlistPage() {
           </div>
         </div>
       </section>
-
-      {/* As Featured In */}
-      <AsFeaturedIn />
 
       {/* Final CTA */}
       <section className="section">
