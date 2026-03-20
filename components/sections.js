@@ -402,11 +402,6 @@ export function IndustryRecognition() {
   );
 }
 
-// Deprecated: Use IndustryRecognition instead
-export function AsFeaturedIn() {
-  return <IndustryRecognition />;
-}
-
 // Urgency/Scarcity Components
 export function UrgencyBanner({ message, submessage }) {
   return (
