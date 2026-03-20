@@ -381,18 +381,30 @@ export function TrustBadgeRow() {
   );
 }
 
-export function AsFeaturedIn() {
-  const publications = ['Canadian Business', 'HVAC Excellence', 'Contractor Magazine', 'HomeAdvisor Pro', 'Ontario Construction News'];
+export function IndustryRecognition() {
+  const associations = [
+    { name: 'HVAC Excellence', desc: 'Industry training and certification standards' },
+    { name: 'Canadian Home Builders Association', desc: 'National residential construction association' },
+    { name: 'Ontario General Contractors Association', desc: 'Provincial contractor association' }
+  ];
   return (
-    <div className="as-featured-in">
-      <span className="eyebrow">As Featured In</span>
-      <div className="featured-logos">
-        {publications.map((pub) => (
-          <span key={pub} className="featured-logo">{pub}</span>
+    <div className="industry-recognition">
+      <span className="eyebrow">Industry Recognition</span>
+      <div className="association-list">
+        {associations.map((assoc) => (
+          <div key={assoc.name} className="association-item">
+            <strong>{assoc.name}</strong>
+            <span className="association-desc">{assoc.desc}</span>
+          </div>
         ))}
       </div>
     </div>
   );
+}
+
+// Deprecated: Use IndustryRecognition instead
+export function AsFeaturedIn() {
+  return <IndustryRecognition />;
 }
 
 // Urgency/Scarcity Components
@@ -423,7 +435,7 @@ export function InvestorGateBanner() {
 }
 
 // Founder/Team Components
-export function FounderCard({ name, role, bio, experience, image }) {
+export function FounderCard({ name, role, bio, experience, image, linkedin }) {
   return (
     <div className="card founder-card">
       <div className="founder-avatar">
@@ -437,6 +449,21 @@ export function FounderCard({ name, role, bio, experience, image }) {
           <ul className="founder-experience">
             {experience.map((exp, i) => <li key={i}>{exp}</li>)}
           </ul>
+        )}
+        {linkedin && (
+          <div style={{ marginTop: 12 }}>
+            <a 
+              href={linkedin}
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'var(--accent)', textDecoration: 'none' }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              Connect on LinkedIn
+            </a>
+          </div>
         )}
       </div>
     </div>
