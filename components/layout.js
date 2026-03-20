@@ -17,7 +17,7 @@ export function Header() {
         <div className="container nav">
           <Link href="/" className="brand" aria-label="HomeStake Capital home">
             <Image 
-              src="/homestake-logo-v3.png" 
+              src="/homestake-final-logo.png" 
               alt="HomeStake Capital" 
               width={180} 
               height={240}
@@ -25,7 +25,7 @@ export function Header() {
               priority
             />
             <Image 
-              src="/homestake-logo-v3.png" 
+              src="/homestake-final-logo.png" 
               alt="HomeStake Capital" 
               width={120} 
               height={160}
@@ -89,7 +89,7 @@ export function Footer() {
       <div className="container grid-3">
         <div>
           <Image 
-            src="/homestake-logo-v3.png" 
+            src="/homestake-final-logo.png" 
             alt="HomeStake Capital" 
             width={180} 
             height={240}
