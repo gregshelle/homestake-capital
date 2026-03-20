@@ -15,22 +15,23 @@ export function Header() {
 
       <header className="topbar">
         <div className="container nav">
-          <Link href="/" className="brand" aria-label="HomeStake Capital home">
-            <Image 
-              src="/homestake-final-logo.png" 
-              alt="HomeStake Capital" 
-              width={180} 
+          <Link href="/"
+              class="brand" aria-label="HomeStake Capital home">
+            <img
+              src="/homestake-final-logo.png"
+              alt="HomeStake Capital"
+              width={180}
               height={240}
-              className="brand-logo desktop"
-              priority
+              class="brand-logo desktop"
+              style={{ height: "80px", width: "auto" }}
             />
-            <Image 
-              src="/homestake-final-logo.png" 
-              alt="HomeStake Capital" 
-              width={120} 
+            <img
+              src="/homestake-final-logo.png"
+              alt="HomeStake Capital"
+              width={120}
               height={160}
-              className="brand-logo mobile"
-              priority
+              class="brand-logo mobile"
+              style={{ height: "80px", width: "auto" }}
             />
           </Link>
 
