@@ -16,6 +16,9 @@ const founderInfo = {
 
 export const metadata = {
   title: 'About HomeStake Capital | Mission, Model, and Principles',
+  alternates: {
+    canonical: 'https://website-build-ivory.vercel.app/about'
+  },
   description:
     'Learn why HomeStake Capital is building a community-first holding company for home services, with a focus on operational discipline, transparency, and a more thoughtful ownership story.',
 };
