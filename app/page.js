@@ -52,11 +52,11 @@ const founderInfo = {
 
 export default function HomePage() {
   return (
-    <script 
+    <> 
+      <script 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <>
       {/* Trust Banner - Urgency/Scarcity */}
       <div style={{ background: 'linear-gradient(135deg, #1b2833, #16212b)', padding: '12px 0' }}>
         <div className="container">
