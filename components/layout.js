@@ -18,7 +18,7 @@ export function Header() {
           <Link href="/"
               className="brand" aria-label="HomeStake Capital home">
             <img
-              src="/homestake-final-logo.png"
+              src="/homestake-logo.png"
               alt="HomeStake Capital"
               className="brand-logo desktop"
               style={{ height: "64px", width: "auto" }}
@@ -81,7 +81,7 @@ export function Footer() {
       <div className="container grid-3">
         <div>
           <Image 
-            src="/homestake-final-logo.png" 
+            src="/homestake-logo.png" 
             alt="HomeStake Capital" 
             width={180} 
             height={240}
