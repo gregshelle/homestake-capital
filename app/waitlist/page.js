@@ -10,6 +10,9 @@ const marketStats = [
 
 export const metadata = {
   title: 'HomeStake Capital Waitlist | Follow the Launch Early',
+  alternates: {
+    canonical: 'https://website-build-ivory.vercel.app/waitlist'
+  },
   description:
     'Join the HomeStake Capital waitlist for launch updates, plain-English explainers, and early visibility into a community-first home services platform.',
 };
