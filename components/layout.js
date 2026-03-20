@@ -17,18 +17,18 @@ export function Header() {
         <div className="container nav">
           <Link href="/" className="brand" aria-label="HomeStake Capital home">
             <Image 
-              src="/homestake-header-logo.png" 
+              src="/homestake-logo-v3.png" 
               alt="HomeStake Capital" 
-              width={280} 
-              height={158}
+              width={180} 
+              height={240}
               className="brand-logo desktop"
               priority
             />
             <Image 
               src="/homestake-logo-v3.png" 
               alt="HomeStake Capital" 
-              width={140} 
-              height={187}
+              width={120} 
+              height={160}
               className="brand-logo mobile"
               priority
             />
@@ -108,6 +108,19 @@ export function Footer() {
               <a href="tel:+12897688694">289-768-8694</a>
             </p>
             <p className="small">Brantford, Ontario, Canada</p>
+            <p className="small" style={{ marginTop: 8 }}>
+              <a 
+                href="https://www.linkedin.com/in/gregshelle/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+              </a>
+            </p>
           </div>
         </div>
         <div>
