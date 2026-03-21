@@ -50,12 +50,34 @@ export function WaitlistForm({ compact = false }) {
     if (errors[k]) setErrors((e) => { const n = { ...e }; delete n[k]; return n; });
   }
 
-  function handleSubmit(ev) {
+  async function handleSubmit(ev) {
     ev.preventDefault();
     const e = validate();
     if (Object.keys(e).length) { setErrors(e); return; }
     setLoading(true);
-    setTimeout(() => { setLoading(false); setSuccess(true); }, 900);
+    setErrors({});
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          first_name: fields.firstName,
+          email: fields.email,
+          country: fields.location,
+          interest: fields.interest,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setErrors({ form: data.error || 'Something went wrong. Please try again.' });
+      } else {
+        setSuccess(true);
+      }
+    } catch {
+      setErrors({ form: 'Network error. Please check your connection and try again.' });
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (success) {
@@ -134,6 +156,7 @@ export function WaitlistForm({ compact = false }) {
           </div>
         )}
       </div>
+      {errors.form && <div className="error-message" role="alert">⚠ {errors.form}</div>}
       <button className="button button-primary" type="submit" disabled={loading} aria-busy={loading}>
         {loading ? 'Submitting…' : 'Join the Waitlist'}
       </button>
@@ -163,12 +186,41 @@ export function SellerForm() {
     if (errors[k]) setErrors((e) => { const n = { ...e }; delete n[k]; return n; });
   }
 
-  function handleSubmit(ev) {
+  async function handleSubmit(ev) {
     ev.preventDefault();
     const e = validate();
     if (Object.keys(e).length) { setErrors(e); return; }
     setLoading(true);
-    setTimeout(() => { setLoading(false); setSuccess(true); }, 900);
+    setErrors({});
+    try {
+      const res = await fetch('/api/sell', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: fields.owner,
+          email: fields.email,
+          phone: fields.phone,
+          business_name: fields.company,
+          business_type: fields.trade,
+          revenue: fields.revenue,
+          message: [
+            fields.location ? `Location: ${fields.location}` : '',
+            fields.timeline ? `Timeline: ${fields.timeline}` : '',
+            fields.notes || '',
+          ].filter(Boolean).join('\n'),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setErrors({ form: data.error || 'Something went wrong. Please try again.' });
+      } else {
+        setSuccess(true);
+      }
+    } catch {
+      setErrors({ form: 'Network error. Please check your connection and try again.' });
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (success) {
@@ -224,6 +276,7 @@ export function SellerForm() {
         <label className="form-label" htmlFor="seller-notes">About your business</label>
         <textarea id="seller-notes" name="notes" className="field" placeholder="Tell us a little about your business, timing, and goals." value={fields.notes} onChange={(e) => handleChange('notes', e.target.value)} />
       </div>
+      {errors.form && <div className="error-message" role="alert">⚠ {errors.form}</div>}
       <button className="button button-primary" type="submit" disabled={loading} aria-busy={loading}>
         {loading ? 'Submitting…' : 'Start a Confidential Conversation'}
       </button>
@@ -252,12 +305,34 @@ export function ContactForm() {
     if (errors[k]) setErrors((e) => { const n = { ...e }; delete n[k]; return n; });
   }
 
-  function handleSubmit(ev) {
+  async function handleSubmit(ev) {
     ev.preventDefault();
     const e = validate();
     if (Object.keys(e).length) { setErrors(e); return; }
     setLoading(true);
-    setTimeout(() => { setLoading(false); setSuccess(true); }, 900);
+    setErrors({});
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: fields.name,
+          email: fields.email,
+          inquiry_type: fields.type,
+          message: fields.message,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setErrors({ form: data.error || 'Something went wrong. Please try again.' });
+      } else {
+        setSuccess(true);
+      }
+    } catch {
+      setErrors({ form: 'Network error. Please check your connection and try again.' });
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (success) {
@@ -300,6 +375,7 @@ export function ContactForm() {
         <textarea id="contact-message" name="message" className={`field${errors.message ? ' field-error' : ''}`} placeholder="How can we help?" value={fields.message} onChange={(e) => handleChange('message', e.target.value)} aria-required="true" aria-describedby={errors.message ? 'contact-message-error' : undefined} />
         {errors.message && <span id="contact-message-error" className="error-message" role="alert">⚠ {errors.message}</span>}
       </div>
+      {errors.form && <div className="error-message" role="alert">⚠ {errors.form}</div>}
       <button className="button button-primary" type="submit" disabled={loading} aria-busy={loading}>
         {loading ? 'Sending…' : 'Send Message'}
       </button>
@@ -335,20 +411,6 @@ export function FAQAccordion({ items, category }) {
   );
 }
 
-// Legacy FAQ List for backwards compatibility
-export function FAQList({ items }) {
-  return (
-    <div>
-      {items.map((item) => (
-        <div className="faq-item" key={item.q}>
-          <h3>{item.q}</h3>
-          <p>{item.a}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 // Social Proof Components
 export function TestimonialCard({ quote, author, role, company }) {
   return (
@@ -377,27 +439,6 @@ export function TrustBadgeRow() {
           <span>{badge.label}</span>
         </div>
       ))}
-    </div>
-  );
-}
-
-export function IndustryRecognition() {
-  const associations = [
-    { name: 'HVAC Excellence', desc: 'Industry training and certification standards' },
-    { name: 'Canadian Home Builders Association', desc: 'National residential construction association' },
-    { name: 'Ontario General Contractors Association', desc: 'Provincial contractor association' }
-  ];
-  return (
-    <div className="industry-recognition">
-      <span className="eyebrow">Industry Recognition</span>
-      <div className="association-list">
-        {associations.map((assoc) => (
-          <div key={assoc.name} className="association-item">
-            <strong>{assoc.name}</strong>
-            <span className="association-desc">{assoc.desc}</span>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }

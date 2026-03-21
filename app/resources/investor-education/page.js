@@ -1,9 +1,10 @@
 import { PageHero } from '../../../components/layout';
+import { site } from '../../../lib/site';
 
 export const metadata = {
   title: 'Investor Education | HomeStake Capital',
   alternates: {
-    canonical: 'https://website-build-ivory.vercel.app/resources/investor-education'
+    canonical: `${site.url}/resources/investor-education`
   },
   description:
     'Investor education hub for HomeStake Capital covering the model, risks, and expected platform experience.',

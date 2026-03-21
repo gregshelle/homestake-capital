@@ -1,5 +1,7 @@
+import { site } from '../lib/site';
+
 export default function sitemap() {
-  const base = 'https://website-build-ivory.vercel.app';
+  const base = site.url;
   const pages = [
     '',
     '/about',

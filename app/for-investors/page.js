@@ -1,5 +1,5 @@
 import { PageHero } from '../../components/layout';
-import { CTASection, FAQList, WaitlistForm, InvestorGateBanner, TestimonialCard, UrgencyBanner, TrustBadgeRow } from '../../components/sections';
+import { CTASection, FAQAccordion, WaitlistForm, InvestorGateBanner, TestimonialCard, UrgencyBanner, TrustBadgeRow } from '../../components/sections';
 
 const faqs = [
   { q: 'Can I invest right now?', a: 'Not through this website unless and until a live offering is formally available. Right now, the primary public action is joining the waitlist for updates and educational content.' },
@@ -208,7 +208,7 @@ export default function InvestorsPage() {
       <section className="section">
         <div className="container">
           <h2>Common Investor Questions</h2>
-          <FAQList items={faqs} />
+          <FAQAccordion items={faqs} />
         </div>
       </section>
 

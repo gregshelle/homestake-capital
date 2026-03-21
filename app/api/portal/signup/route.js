@@ -1,6 +1,7 @@
 import { createClient } from '../../../../lib/supabase/server';
 import { signupSchema, validateRequest } from '../../../../lib/validation';
 import { applySecurityChecks } from '../../../../lib/security';
+import { site } from '../../../../lib/site';
 
 export async function POST(request) {
   // Apply security checks including rate limiting for auth endpoints
@@ -30,7 +31,7 @@ export async function POST(request) {
       password,
       options: {
         data: { full_name },
-        emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://website-build-ivory.vercel.app'}/auth/callback`
+        emailRedirectTo: `${site.url}/auth/callback`
       }
     });
 

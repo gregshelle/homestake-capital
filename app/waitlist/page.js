@@ -1,5 +1,6 @@
 import { PageHero } from '../../components/layout';
 import { CTASection, WaitlistForm, TestimonialCard, TrustBadgeRow, UrgencyBanner, MarketStatCard } from '../../components/sections';
+import { site } from '../../lib/site';
 
 const marketStats = [
   { value: '$600B+', label: 'Market Opportunity', source: '' },
@@ -11,7 +12,7 @@ const marketStats = [
 export const metadata = {
   title: 'HomeStake Capital Waitlist | Follow the Launch Early',
   alternates: {
-    canonical: 'https://website-build-ivory.vercel.app/waitlist'
+    canonical: `${site.url}/waitlist`
   },
   description:
     'Join the HomeStake Capital waitlist for launch updates, plain-English explainers, and early visibility into a community-first home services platform.',

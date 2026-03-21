@@ -24,7 +24,6 @@ export function Header() {
               style={{ height: "64px", width: "auto", color: "inherit" }}
             />
           </Link>
-          </Link>
 
           <nav className="nav-links" aria-label="Primary navigation">
             {site.nav.map((item) => (
@@ -102,7 +101,7 @@ export function Footer() {
             <p className="small">Brantford, Ontario, Canada</p>
             <p className="small" style={{ marginTop: 8 }}>
               <a 
-                href="https://www.linkedin.com/in/gregshelle/" 
+                href="https://www.linkedin.com/in/gregshelley/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}

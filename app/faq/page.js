@@ -1,5 +1,6 @@
 import { PageHero } from '../../components/layout';
 import { CTASection, FAQAccordion } from '../../components/sections';
+import { site } from '../../lib/site';
 
 const faqCategories = [
   {
@@ -43,7 +44,7 @@ const allItems = faqCategories.flatMap(cat => cat.items);
 export const metadata = {
   title: 'HomeStake Capital FAQ',
   alternates: {
-    canonical: 'https://website-build-ivory.vercel.app/faq'
+    canonical: `${site.url}/faq`
   },
   description: 'Answers to investor, seller, and category questions about HomeStake Capital.',
 };

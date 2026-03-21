@@ -1,10 +1,11 @@
 import { PageHero } from '../../components/layout';
 import { CTASection } from '../../components/sections';
+import { site } from '../../lib/site';
 
 export const metadata = {
   title: 'How HomeStake Works | Home Services Holding Company Model',
   alternates: {
-    canonical: 'https://website-build-ivory.vercel.app/how-it-works'
+    canonical: `${site.url}/how-it-works`
   },
   description:
     'See how HomeStake Capital plans to acquire, operate, and grow home service businesses through a disciplined, community-first platform built around transparency and long-term value.',

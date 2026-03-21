@@ -1,9 +1,10 @@
 import { PageHero } from '../../components/layout';
+import { site } from '../../lib/site';
 
 export const metadata = {
   title: 'Portfolio | HomeStake Capital — Home Services Acquisitions',
   description: 'Our portfolio of home services companies under HomeStake Capital management.',
-  alternates: { canonical: 'https://website-build-ivory.vercel.app/portfolio' }
+  alternates: { canonical: `${site.url}/portfolio` }
 };
 
 export default function PortfolioPage() {
