@@ -23,6 +23,12 @@ export function Header() {
               className="brand-logo desktop"
               style={{ height: "64px", width: "auto", color: "inherit" }}
             />
+            <img
+              src="/homestake-logo.png"
+              alt="HomeStake Capital"
+              className="brand-logo mobile"
+              style={{ width: "120px", height: "auto", color: "inherit" }}
+            />
           </Link>
 
           <nav className="nav-links" aria-label="Primary navigation">
